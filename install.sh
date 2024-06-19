@@ -311,7 +311,7 @@ main() {
     # show welcome msg
     clear
     echo
-    echo "........... $is_core_name script by $author .........."
+    echo "........... v2ray .........."
     echo
 
     # start installing...
