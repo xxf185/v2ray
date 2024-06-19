@@ -48,11 +48,11 @@ download() {
     dat)
         name="geoip.dat"
         tmpfile=$tmpdir/geoip.dat
-        link="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+        link="https://github.com/xxf185/v2ray-rules-dat/releases/latest/download/geoip.dat"
         download_file
         name="geosite.dat"
         tmpfile=$tmpdir/geosite.dat
-        link="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+        link="https://github.com/xxf185/v2ray-rules-dat/releases/latest/download/geosite.dat"
         download_file
         cp -f $tmpdir/*.dat $is_core_dir/bin/
         ;;
