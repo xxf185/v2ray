@@ -21,7 +21,7 @@ get_latest_version() {
 }
 download() {
     latest_ver=$2
-    [[ ! $latest_ver ]] && get_latest_version $1
+    [[ ! $latest_ver && $1 != 'dat' ]] && get_latest_version $1
     # tmp dir
     tmpdir=$(mktemp -u)
     [[ ! $tmpdir ]] && {
@@ -45,10 +45,21 @@ download() {
         unzip -qo $tmpfile -d $is_sh_dir
         chmod +x $is_sh_bin
         ;;
+    dat)
+        name="geoip.dat"
+        tmpfile=$tmpdir/geoip.dat
+        link="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+        download_file
+        name="geosite.dat"
+        tmpfile=$tmpdir/geosite.dat
+        link="https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+        download_file
+        cp -f $tmpdir/*.dat $is_core_dir/bin/
+        ;;
     caddy)
         name="Caddy"
         tmpfile=$tmpdir/caddy.tar.gz
-        # https://github.com/xxf185/caddy/releases/download/v2.7.5/caddy_2.7.5_linux_amd64.tar.gz
+        # https://github.com/xxf185/caddy/releases/download/v2.8.4/caddy_2.8.4_linux_amd64.tar.gz
         link="https://github.com/${is_caddy_repo}/releases/download/${latest_ver}/caddy_${latest_ver:1}_linux_${caddy_arch}.tar.gz"
         download_file
         [[ ! $(type -P tar) ]] && {
