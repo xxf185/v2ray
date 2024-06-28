@@ -1505,7 +1505,7 @@ info() {
         is_info_str=($is_protocol $is_addr $port $ss_password $ss_method)
         ;;
     ws | h2 | grpc)
-        is_color=45
+        is_color=44
         is_can_change=(0 1 2 3 5)
         is_info_show=(0 1 2 3 4 6 7 8)
         is_url_path=path
@@ -1528,7 +1528,7 @@ info() {
         is_info_str=($is_protocol $is_addr $is_https_port $uuid $net $host $path 'tls')
         ;;
     reality)
-        is_color=41
+        is_color=44
         is_can_change=(0 1 5 10 11)
         is_info_show=(0 1 2 3 15 8 16 17 18)
         is_info_str=($is_protocol $is_addr $port $uuid xtls-rprx-vision reality $is_servername "ios" $is_public_key)
