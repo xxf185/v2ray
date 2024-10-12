@@ -50,11 +50,11 @@ is_wget=$(type -P wget)
 case $(uname -m) in
 amd64 | x86_64)
     is_jq_arch=amd64
-    is_core_arch="amd64"
+    is_core_arch="64"
     ;;
 *aarch64* | *armv8*)
     is_jq_arch=arm64
-    is_core_arch="arm64"
+    is_core_arch="arm64-v8a"
     ;;
 *)
     err "此脚本仅支持 64 位系统..."
