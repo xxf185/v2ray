@@ -64,11 +64,11 @@ cmd=$(type -P apt-get || type -P yum)
 # x64
 case $(arch) in
 amd64 | x86_64)
-    is_core_arch="64"
+    is_core_arch="amd64"
     caddy_arch="amd64"
     ;;
 *aarch64* | *armv8*)
-    is_core_arch="arm64-v8a"
+    is_core_arch="arm64"
     caddy_arch="arm64"
     ;;
 *)
