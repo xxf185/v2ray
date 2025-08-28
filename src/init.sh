@@ -1,7 +1,7 @@
 #!/bin/bash
 
-author=233boy
-# github=https://github.com/233boy/v2ray
+author=xxf185
+# github=https://github.com/xxf185/v2ray
 
 # bash fonts colors
 red='\e[31m'
@@ -80,7 +80,7 @@ is_core=v2ray
 is_core_name=V2Ray
 is_core_dir=/etc/$is_core
 is_core_bin=$is_core_dir/bin/$is_core
-is_core_repo=v2fly/$is_core-core
+is_core_repo=xxf185/$is_core-core
 is_conf_dir=$is_core_dir/conf
 is_log_dir=/var/log/$is_core
 is_sh_bin=/usr/local/bin/$is_core
@@ -90,7 +90,7 @@ is_pkg="wget unzip jq qrencode"
 is_config_json=$is_core_dir/config.json
 is_caddy_bin=/usr/local/bin/caddy
 is_caddy_dir=/etc/caddy
-is_caddy_repo=caddyserver/caddy
+is_caddy_repo=xxf185/caddy
 is_caddyfile=$is_caddy_dir/Caddyfile
 is_caddy_conf=$is_caddy_dir/$author
 is_caddy_service=$(systemctl list-units --full -all | grep caddy.service)
