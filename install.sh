@@ -1,7 +1,7 @@
 #!/bin/bash
 
-author=233boy
-# github=https://github.com/233boy/v2ray
+author=xxf185
+# github=https://github.com/xxf185/v2ray
 
 # bash fonts colors
 red='\e[31m'
@@ -174,7 +174,7 @@ download() {
         is_ok=$is_sh_ok
         ;;
     jq)
-        link=https://github.com/jqlang/jq/releases/download/jq-1.7.1/jq-linux-$is_jq_arch
+        link=https://github.com/xxf185/jq/releases/latest/download/jq-linux-$is_jq_arch
         name="jq"
         tmpfile=$tmpjq
         is_ok=$is_jq_ok
@@ -291,7 +291,7 @@ exit_and_del_tmpdir() {
     [[ ! $1 ]] && {
         msg err "哦豁.."
         msg err "安装过程出现错误..."
-        echo -e "反馈问题) https://github.com/${is_sh_repo}/issues"
+        echo -e ""
         echo
         exit 1
     }
@@ -312,7 +312,7 @@ main() {
     # show welcome msg
     clear
     echo
-    echo "........... $is_core_name script by $author .........."
+    echo "........... v2ray .........."
     echo
 
     # start installing...
